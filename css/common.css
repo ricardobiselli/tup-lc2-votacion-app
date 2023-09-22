@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+a{
+  text-decoration: none;
+}
+
+#headerlogo {
+  width: 150px;
+  margin-left: 40px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.header-page {
+  padding: 0.5em;
+  background-color: var(--celeste);
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  width: 99%;
+}
+
+.backgroundbuttons {
+
+  display: flex;
+  background-color: var(--fondo-Menu);
+  color: white;
+  width: 100%;
+height: 60px;
+align-items: center;
+}
+
+
+h1 {
+  font-size: 26px;
+  color: var(--titulos);
+}
+
+h2 {
+  font-size: 22px;
+  color: var(--titulos);
+}
+
+h3 {
+  font-size: 18px;
+  color: var(--titulos);
+}
+
+p {
+  font-size: 12px;
+  color: var(--textos);
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  height: 140px;
+  justify-content: space-between;
+  max-width: 100%;
+  background-color: var(--fondo-Footer);
+  color: var(--texto-footer);
+  /* No funciona, está tomando el color de p ? */
+
+}
+
+.footer-images {
+  flex: 40%;
+  max-height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.footer-images img {
+  max-width: 30%;
+  height: auto;
+}
+
+.footer-text {
+  flex: 60%;
+  max-height: 100%;
+  overflow: hidden;
+  /* oculta el texto que se sale de pantalla */
+}
+
+.footer-text p {
+  color: var(--texto-footer);
+}
+
+

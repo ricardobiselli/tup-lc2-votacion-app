@@ -1,0 +1,149 @@
+
+
+#consultar {
+  margin-left: 20px;
+  margin-right: 20px;
+  color: white;
+}
+
+
+
+
+
+
+.backgroundbuttons p{
+
+    color: white;
+    margin-right: 20px;
+   
+}
+
+.backgroundbuttons ul {
+    list-style: none;
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+}
+
+
+
+.backgroundbuttons ul li {
+    margin-right: 10px; 
+}
+
+
+.boton-paso,
+.boton-generales,
+.boton-informes {
+    background-color: var(--magenta);
+    border-radius: 5px;
+    padding: 8px 20px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+    font-size: 14px;
+    
+}
+
+.boton-generales {
+    background-color: var(--celeste);
+}
+
+.boton-informes {
+    background-color: transparent;
+    border-radius: 15px;
+    padding: 8px 20px;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid white; 
+}
+
+
+.boton-paso:hover,
+.boton-generales:hover,
+.boton-informes:hover {
+    background-color: var(--gris-claro);
+}
+
+
+
+
+#main-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.main-text p {
+  line-height: 20px;
+}
+
+.main-text {
+width: 50%;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.main-image {
+  width: 50%;
+}
+
+
+
+
+
+#sec-contenido {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+}
+
+.contenedor-iconos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+  margin-top: 30px;
+}
+
+.icon-container { /*boton  magenta*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-right: 25px;
+  background-color: var(--magenta);
+  height: 100px;
+  width: 400px;
+  margin-right: 50px;
+  color: #FFF;
+  font-size: 28px; 
+}
+
+.icon-container-lightblue { /*boton celeste*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: var(--celeste);
+  height: 100px;
+  width: 400px;
+  color: #FFF; 
+  font-size: 28px; 
+}
+
+.icon-text {
+  margin-top: 10px;
+}
+
+.link {
+  color: white;
+}

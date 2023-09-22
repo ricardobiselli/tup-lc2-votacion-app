@@ -1,0 +1,342 @@
+.desplegables {
+    list-style: none;
+    display: flex;
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    padding: 5px;
+    color: var(--celeste);
+    font-weight: bold;
+
+}
+
+.boton-filtrar {
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 8px 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    color: var(--textos);
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.generales {
+    background-color: var(--celeste);
+    border-radius: 5px;
+    padding: 8px 20px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+.inicio {
+    background-color: var(--gris-claro);
+    border-radius: 5px;
+    padding: 8px 20px;
+    color: #FFF;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: 20px;
+
+}
+
+.informes {
+    background-color: transparent;
+    border-radius: 15px;
+    padding: 8px 20px;
+    color: #FFF;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid white;
+}
+
+.inicio:hover {
+    color: var(--textos);
+}
+
+.lista-boton-separado {
+    /*para tirarlo a la derecha*/
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+}
+
+.active:hover {
+    background-color: var(--gris-claro);
+}
+
+.carteles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.pulgar {
+
+    background-color: var(--mensaje-usuario-verde);
+    width: 400px;
+    padding: 15px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 200;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.triangulo {
+
+    background-color: var(--mensaje-usuario-rojo);
+    width: 400px;
+    padding: 15px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 200;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 20px;
+
+}
+
+.exclamacion {
+
+    background-color: var(--mensaje-usuario-amarillo);
+    width: 400px;
+    padding: 15px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 200;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.texto-path {
+    font-size: 14px;
+    font-family: 'Roboto';
+    Color: var(--celeste);
+}
+
+.subtitulo {
+    margin-left: 90px;
+}
+
+.icon:hover {
+    color: var(--textos);
+}
+
+.seccion-botones {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.botones-derecha {
+    display: flex;
+
+}
+
+.boton-agregar {
+
+
+    background-color: var(--gris-claro);
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-right: 10px;
+    margin-left: 20px;
+    border: none;
+
+}
+
+.escrutadas {
+
+    background-color: var(--celeste);
+    border-radius: 10px;
+    margin: 15px;
+    width: 184px;
+    height: 70px;
+    padding: 0.5rem 1rem;
+    color: #FFF;
+    font-size: 12px;
+}
+
+.electores {
+
+    background-color: var(--magenta);
+    border-radius: 10px;
+    margin: 15px;
+    width: 184px;
+    height: 70px;
+    padding: 0.5rem 1rem;
+    color: #FFF;
+    font-size: 12px;
+}
+
+.participacion {
+    background-color: var(--morado);
+    border-radius: 10px;
+    margin: 15px;
+    width: 184px;
+    height: 70px;
+    padding: 0.5rem 1rem;
+    color: #FFF;
+    font-size: 12px;
+}
+
+.icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-text {
+    color: #FFF;
+}
+
+.contenedor-cajas {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.caja {
+    flex-grow: 1;
+    border-radius: 25px;
+    border: 1px solid var(--borde-Grilla);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.agrupacion {
+    height: 325px;
+    overflow-y: auto;
+}
+
+.caja h3 {
+    font-weight: bold;
+    padding: 1.8em 0 0 0;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.progress {
+    height: 35px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: width 0.25s;
+    border-radius: 5px;
+}
+
+.progress-bar-text {
+    margin-left: 10px;
+    font-weight: bold;
+    color: var(--textos);
+    font-size: 9px;
+}
+
+.chart-wrap {
+    --chart-width: 260px;
+    --grid-color: #aaa;
+    --bar-thickness: 25px;
+    --bar-rounded: 3px;
+    --bar-spacing: 10px;
+    font-family: sans-serif;
+    width: var(--chart-width);
+}
+
+.chart-wrap .title {
+    font-weight: bold;
+    padding: 1.8em 0 2.8em;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.chart-wrap.horizontal .grid {
+    transform: rotate(-90deg);
+}
+
+.chart-wrap.horizontal .bar::after {
+    transform: rotate(45deg);
+    padding-top: 0px;
+    display: block;
+}
+
+.chart-wrap .grid {
+    margin-left: 50px;
+    position: relative;
+    padding: 5px 0 5px 0;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid var(--grid-color);
+    font-size: 10px;
+}
+
+.chart-wrap .grid::before {
+    font-size: 0.8em;
+    font-weight: bold;
+    content: '0%';
+    position: absolute;
+    left: -0.5em;
+    top: -1.5em;
+}
+
+.chart-wrap .grid::after {
+    font-size: 0.8em;
+    font-weight: bold;
+    content: '100%';
+    position: absolute;
+    right: -1.5em;
+    top: -1.5em;
+}
+
+.chart-wrap.horizontal .grid::before,
+.chart-wrap.horizontal .grid::after {
+    transform: rotate(90deg);
+}
+
+.chart-wrap .bar {
+    width: var(--bar-value);
+    height: var(--bar-thickness);
+    margin: var(--bar-spacing) 0;
+    background-color: var(--magenta);
+    border-radius: 0 var(--bar-rounded) var(--bar-rounded) 0;
+}
+
+.chart-wrap .bar:hover {
+    opacity: 0.7;
+}
+
+.chart-wrap .bar::after {
+    content: attr(data-name);
+    margin-left: 100%;
+    padding: 10px;
+    display: inline-block;
+    white-space: nowrap;
+}
