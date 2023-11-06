@@ -1,363 +1,369 @@
 .desplegables {
-    list-style: none;
-    display: flex;
-    background: transparent;
-    border: none;
-    font-size: 14px;
-    padding: 5px;
-    color: var(--celeste);
-    font-weight: bold;
-
+  list-style: none;
+  display: flex;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  padding: 5px;
+  color: var(--celeste);
+  font-weight: bold;
 }
 
 .boton-filtrar {
-    background-color: white;
-    border: none;
-    border-radius: 15px;
-    padding: 8px 20px;
-    margin-right: 20px;
-    margin-left: 20px;
-    color: var(--textos);
-    font-size: 10px;
-    text-transform: uppercase;
-    text-align: center;
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 8px 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  color: var(--textos);
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .generales {
-    background-color: var(--celeste);
-    border-radius: 5px;
-    padding: 8px 20px;
-    color: white;
-    text-transform: uppercase;
-    text-align: center;
-    border: none;
-    font-size: 14px;
-    margin-right: 20px;
+  background-color: var(--celeste);
+  border-radius: 5px;
+  padding: 8px 20px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  font-size: 14px;
+  margin-right: 20px;
 }
 
 .inicio {
-    background-color: var(--gris-claro);
-    border-radius: 5px;
-    padding: 8px 20px;
-    color: #FFF;
-    font-size: 10px;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 14px;
-    margin-left: auto;
-    margin-right: 20px;
-
+  background-color: var(--gris-claro);
+  border-radius: 5px;
+  padding: 8px 20px;
+  color: #fff;
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 14px;
+  margin-left: auto;
+  margin-right: 20px;
 }
 
 .informes {
-    background-color: transparent;
-    border-radius: 15px;
-    padding: 8px 20px;
-    color: #FFF;
-    font-size: 10px;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 14px;
-    border: 1px solid white;
+  background-color: transparent;
+  border-radius: 15px;
+  padding: 8px 20px;
+  color: #fff;
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid white;
 }
 
 .inicio:hover {
-    color: var(--textos);
+  color: var(--textos);
 }
 
 .lista-boton-separado {
-    display: flex;
-    list-style: none;
-    margin-left: auto;
+  display: flex;
+  list-style: none;
+  margin-left: auto;
 }
 
 .active:hover {
-    background-color: var(--gris-claro);
+  background-color: var(--gris-claro);
 }
 
 .carteles {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
 
 .pulgar {
-
-    background-color: var(--mensaje-usuario-verde);
-    width: 400px;
-    padding: 15px;
-    border-radius: 10px;
-    color: #FFFFFF;
-    font-size: 12px;
-    font-weight: 200;
-    text-align: center;
-    margin-right: 10px;
-    margin-bottom: 20px;
+  background-color: var(--mensaje-usuario-verde);
+  width: 400px;
+  padding: 15px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 200;
+  text-align: center;
+  margin-right: 10px;
+  margin-bottom: 20px;
 }
 
 .triangulo {
-
-    background-color: var(--mensaje-usuario-rojo);
-    width: 400px;
-    padding: 15px;
-    border-radius: 10px;
-    color: #FFFFFF;
-    font-size: 12px;
-    font-weight: 200;
-    text-align: center;
-    margin-right: 10px;
-    margin-bottom: 20px;
-
+  background-color: var(--mensaje-usuario-rojo);
+  width: 400px;
+  padding: 15px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 200;
+  text-align: center;
+  margin-right: 10px;
+  margin-bottom: 20px;
 }
 
 .exclamacion {
-
-    background-color: var(--mensaje-usuario-amarillo);
-    width: 400px;
-    padding: 15px;
-    border-radius: 10px;
-    color: #FFFFFF;
-    font-size: 12px;
-    font-weight: 200;
-    text-align: center;
-    margin-right: 10px;
-    margin-bottom: 20px;
+  background-color: var(--mensaje-usuario-amarillo);
+  width: 400px;
+  padding: 15px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 200;
+  text-align: center;
+  margin-right: 10px;
+  margin-bottom: 20px;
 }
 
-
 .texto-path {
-    font-size: 14px;
-    font-family: 'Roboto';
-    Color: var(--celeste);
+  font-size: 14px;
+  font-family: "Roboto";
+  color: var(--celeste);
 }
 
 .subtitulo {
-    margin-left: 90px;
+  margin-left: 90px;
 }
 
-
-
 .icon:hover {
-    color: var(--textos);
+  color: var(--textos);
 }
 
 .seccion-botones {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
 
 .botones-derecha {
-    display: flex;
-    justify-content: center;
-
+  display: flex;
+  justify-content: center;
 }
 
-
-
 .boton-agregar {
-
-
-    background-color: var(--gris-claro);
-    padding: 5px;
-    border-radius: 5px;
-    color: white;
-    font-size: 10px;
-    text-align: center;
-    text-transform: uppercase;
-    margin-right: 10px;
-    margin-left: 20px;
-    border: none;
-
+  background-color: var(--gris-claro);
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-right: 10px;
+  margin-left: 20px;
+  border: none;
 }
 
 .escrutadas {
-
-    background-color: var(--celeste);
-    border-radius: 10px;
-    margin: 2px;
-    width: 120px;
-    height: 70px;
-    padding: 0.5rem 1rem;
-    color: #FFF;
-    font-size: 10px;
+  background-color: var(--celeste);
+  border-radius: 10px;
+  margin: 2px;
+  width: 120px;
+  height: 70px;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-size: 10px;
 }
 
 .electores {
-
-    background-color: var(--magenta);
-    border-radius: 10px;
-    margin: 2px;
-    width: 120px;
-    height: 70px;
-    padding: 0.5rem 1rem;
-    color: #FFF;
-    font-size: 10px;
-
+  background-color: var(--magenta);
+  border-radius: 10px;
+  margin: 2px;
+  width: 120px;
+  height: 70px;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-size: 10px;
 }
 
 .participacion {
-
-
-    background-color: var(--morado);
-    border-radius: 10px;
-    margin: 2px;
-    width: 120px;
-    height: 70px;
-    padding: 0.5rem 1rem;
-    color: #FFF;
-    font-size: 10px;
+  background-color: var(--morado);
+  border-radius: 10px;
+  margin: 2px;
+  width: 120px;
+  height: 70px;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-size: 10px;
 }
 
 .icon-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100px;
 }
 
 .icon-button p {
-    color: white;
+  color: white;
 }
 
 .icon-text {
-    color: #FFF;
+  color: #fff;
 }
 
 .contenedor-cajas {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    gap: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
 }
 
 .caja {
-    flex-grow: 1;
-    border-radius: 25px;
-    border: 1px solid var(--borde-Grilla);
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  flex-grow: 1;
+  border-radius: 25px;
+  border: 1px solid var(--borde-Grilla);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .caja h3 {
-    font-weight: bold;
-    padding: 1.8em 0 0 0;
-    text-align: center;
-    white-space: nowrap;
+  font-weight: bold;
+  padding: 1.8em 0 0 0;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .progress {
-    height: 35px;
-    width: 100%;
-    border-radius: 5px;
-    margin-bottom: 15px;
+  height: 35px;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
 
 .progress-bar {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    transition: width 0.25s;
-    border-radius: 5px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: width 0.25s;
+  border-radius: 5px;
 }
 
 .progress-bar-text {
-    margin-left: 10px;
-    font-weight: bold;
-    color: var(--textos);
-    font-size: 9px;
+  margin-left: 10px;
+  font-weight: bold;
+  color: var(--textos);
+  font-size: 9px;
 }
 
 .chart-wrap {
-    --chart-width: 260px;
-    --grid-color: #aaa;
-    --bar-thickness: 25px;
-    --bar-rounded: 3px;
-    --bar-spacing: 10px;
-    font-family: sans-serif;
-    width: var(--chart-width);
+  --chart-width: 260px;
+  --grid-color: #aaa;
+  --bar-thickness: 25px;
+  --bar-rounded: 3px;
+  --bar-spacing: 10px;
+  font-family: sans-serif;
+  width: var(--chart-width);
 }
 
 .chart-wrap .title {
-    font-weight: bold;
-    padding: 1.8em 0 2.8em;
-    text-align: center;
-    white-space: nowrap;
+  font-weight: bold;
+  padding: 1.8em 0 2.8em;
+  text-align: center;
+  white-space: nowrap;
 }
 
 /* cuando definimos el gráfico en horizontal, lo giramos 90 grados */
 .chart-wrap.horizontal .grid {
-    transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 .chart-wrap.horizontal .bar::after {
-    /* giramos las letras para horizontal*/
-    transform: rotate(45deg);
-    padding-top: 0px;
-    display: block;
+  /* giramos las letras para horizontal*/
+  transform: rotate(45deg);
+  padding-top: 0px;
+  display: block;
 }
 
 .chart-wrap .grid {
-    margin-left: 50px;
-    position: relative;
-    padding: 5px 0 5px 0;
-    height: 100%;
-    width: 100%;
-    border-left: 2px solid var(--grid-color);
-    font-size: 10px;
+  margin-left: 50px;
+  position: relative;
+  padding: 5px 0 5px 0;
+  height: 100%;
+  width: 100%;
+  border-left: 2px solid var(--grid-color);
+  font-size: 10px;
 }
 
 /* posicionamos el % del gráfico*/
 .chart-wrap .grid::before {
-    font-size: 0.8em;
-    font-weight: bold;
-    content: '0%';
-    position: absolute;
-    left: -0.5em;
-    top: -1.5em;
+  font-size: 0.8em;
+  font-weight: bold;
+  content: "0%";
+  position: absolute;
+  left: -0.5em;
+  top: -1.5em;
 }
 
 .chart-wrap .grid::after {
-    font-size: 0.8em;
-    font-weight: bold;
-    content: '100%';
-    position: absolute;
-    right: -1.5em;
-    top: -1.5em;
+  font-size: 0.8em;
+  font-weight: bold;
+  content: "100%";
+  position: absolute;
+  right: -1.5em;
+  top: -1.5em;
 }
 
 /* giramos las valores de 0% y 100% para horizontal */
 .chart-wrap.horizontal .grid::before,
 .chart-wrap.horizontal .grid::after {
-    transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .chart-wrap .bar {
-    width: var(--bar-value);
-    height: var(--bar-thickness);
-    margin: var(--bar-spacing) 0;
-    background-color: var(--magenta);
-    border-radius: 0 var(--bar-rounded) var(--bar-rounded) 0;
+  width: var(--bar-value);
+  height: var(--bar-thickness);
+  margin: var(--bar-spacing) 0;
+  background-color: var(--magenta);
+  border-radius: 0 var(--bar-rounded) var(--bar-rounded) 0;
 }
 
 .chart-wrap .bar:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .chart-wrap .bar::after {
-    content: attr(data-name);
-    margin-left: 100%;
-    padding: 10px;
-    display: inline-block;
-    white-space: nowrap;
+  content: attr(data-name);
+  margin-left: 100%;
+  padding: 10px;
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .grilla {
-    width: 1024px;
-    margin: 0 auto 50px auto;
-    border-radius: 15px;
-    border: 1px solid var(--borde-Grilla);
-    border-collapse: collapse;
-    background-color: rgb(250, 250, 250);
+  width: 90%;
+  margin: 0 auto 50px auto;
+  border: 1px solid var(--borde-Grilla);
+  border-radius: 15px;
+  background-color: rgb(250, 250, 250);
+}
+
+.grilla thead tr th {
+  border-bottom: 1px solid var(--borde-Grilla);
+}
+
+.texto-elecciones-chico {
+  font-size: 12px;
+  color: var(--textos);
+  font-weight: bold;
+}
+
+.texto-path-chico {
+  font-size: 11px;
+  color: var(--celeste);
+}
+
+.agrupacion-texto {
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+}
+
+.agrupacion-texto h3,
+.agrupacion-texto p {
+  font-size: 10px;
+  color: var(--textos);
 }
