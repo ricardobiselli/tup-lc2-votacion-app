@@ -29,14 +29,26 @@
         <div class="backgroundbuttons">
             <ul class="desplegables">
                 <li>
-                    <select><option value="">Año</option></select>
+                    <select class="anio" onchange="cargarCargos()">
+                        <option value="">Año</option>
+                    </select>
                 </li>
                 <li>
-                    <select><option value="">Cargo</option></select>
+                    <select class="cargo" onchange="cargarDistritos()">
+                        <option value="">Cargo</option>
+                    </select>
                 </li>
                 <li>
-                  <select><option value="">Distrito</option></select>
+                    <select class=" distrito">
+                        <option value="">Distrito</option>
+                    </select>
                 </li>
+                <li>
+                    <select class=" seccion">
+                        <option value="">Sección</option>
+                    </select>
+                </li>
+
 
                 <li><a href="#" class="boton-filtrar"><i class="fa-solid fa-magnifying-glass"></i>FILTRAR</a></li>
                 <li><a href="generales.html" class="generales">GENERALES</a></li>
@@ -49,24 +61,22 @@
 
 
     </header>
-    <!-- Contenido principal de la página -->
     <main>
         <section id="main-section">
             <div class="carteles">
-                <div class="pulgar">
+                <div class="pulgar" id="pular">
 
                     <span class="icon"><i class="fa-solid fa-thumbs-up"></i></span>
                     <span class="icon-text">Se agregó con éxito el resultado al informe</span>
-                    <!--Elementos separados bajo una misma clase para darle estilo a ambas cosas-->
 
                 </div>
-                <div class="triangulo">
+                <div class="triangulo" id="triangulo">
 
                     <span class="icon"><i class="fa-solid fa-triangle-exclamation"></i></span>
                     <span class="icon-text">Error: Se produjo un error al intentar agregar resultados al informe</span>
 
                 </div>
-                <div class="exclamacion">
+                <div class="exclamacion" id="exclamacion">
 
                     <span class="icon"><i class="fa-solid fa-exclamation"></i></span>
                     <span class="icon-text">La operación no se pudo completar</span>
@@ -396,7 +406,6 @@
         </section>
 
     </main>
-    <!--Pie de página-->
     <footer class="footer-content">
         <div class="footer-images">
             <img src="img\icons\Ministerio-del-Interior_pluma.1ab9a7a7.png" alt="logo Ministerio del interior">
@@ -415,6 +424,7 @@
     </footer>
 
 </body>
+<script src="paso.js"></script>
 
 
 </html>
