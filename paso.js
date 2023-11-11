@@ -1,9 +1,9 @@
 const tipoEleccion = 1;
 const tipoRecuento = 1;
 
-const cartelVerde = document.getElementById("verde");
-const cartelAmarillo = document.getElementById("amarillo");
-const cartelRojo = document.getElementById("rojo");
+const cartelVerde = document.getElementsByClassName("verde")[0];
+const cartelAmarillo = document.getElementsByClassName("amarillo")[0];
+const cartelRojo = document.getElementsByClassName("rojo")[0];
 
 const anioSelect = document.querySelector(".anio");
 const cargoSelect = document.querySelector(".cargo");
@@ -18,9 +18,6 @@ const botonFiltrar = document.querySelector(".boton-filtrar");
 const pasos = document.querySelector(".container-pasos");
 
 function pantallaInicio() {
-  // Oculta todos los carteles antes de mostrar el amarillo
-  cartelVerde.style.display = "none";
-  cartelRojo.style.display = "none";
 
   // Muestra el cartel amarillo
   cartelAmarillo.style.display = "block";
@@ -28,7 +25,7 @@ function pantallaInicio() {
     '<p><i class="fa-solid fa-exclamation"></i>  Debe seleccionar los valores a filtrar y hacer clic en el botón FILTRAR</p>';
 
   // Oculta el contenedor de pasos
-  pasos.style.display = "none";
+  pasos.style.visibility = "hidden";
   console.log("TEST funcion ocultar pantalla OK ");
 }
 
@@ -284,16 +281,16 @@ async function filtrarResultados() {
       electores.innerText = data.estadoRecuento.cantidadElectores;
       participacion.innerText = `%${data.estadoRecuento.participacionPorcentaje}`;
 
-      const mapa = mapa.find(
+      const mapa = mapas.find(
         (mapas) =>
           mapas.provincia.toLowerCase() ==
           opcionSeleccionadaDist.text.toLowerCase()
       );
-      const provincia = document.getElementsByClassName("provincia")[0];
-      const svg = document.getElementsByClassName("mapa-svg")[0];
+      const provincia = document.getElementsByClassName("titulomapa")[0];
+      const svg = document.getElementsByClassName("mapa")[0];
       provincia.innerText = mapa.provincia;
       svg.innerHTML = mapa.svg;
-      
+
     } else {
       console.error("Error:", response);
       cartelRojo.style.display = "block";
