@@ -63,6 +63,7 @@
 }
 
 .carteles {
+  /*visibility: hidden;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -115,7 +116,7 @@
   color: var(--celeste);
 }
 
-.subtitulo {
+.titulo {
   margin-left: 90px;
 }
 
@@ -282,3 +283,7 @@
   display: inline-block;
   white-space: nowrap;
 }
+
+/*.container-pasos {
+  visibility: hidden;
+}*/
