@@ -165,11 +165,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
 }
 
-.icon-text {
-  color: #fff;
-}
 
 .agrupacion {
   height: 325px;

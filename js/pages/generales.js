@@ -1,5 +1,7 @@
 const tipoEleccion = 2;
 const tipoRecuento = 1;
+const generales = "generales";
+const provisorio = "provisorio";
 
 const cartelVerde = document.getElementsByClassName("verde")[0];
 const cartelAmarillo = document.getElementsByClassName("amarillo")[0];
@@ -295,7 +297,7 @@ async function filtrarResultados() {
       const opcionSeleccionadaSeccion =
         seccionSelect.options[seccionSelect.selectedIndex];
 
-      textoPath.innerText = `${anioEleccion} > Generales > Provisorio > ${opcionSeleccionadaCargo.text} > ${opcionSeleccionadaDist.text}> ${opcionSeleccionadaSeccion.text}`;
+      textoPath.innerText = `${anioEleccion} > ${generales} > ${provisorio} > ${opcionSeleccionadaCargo.text} > ${opcionSeleccionadaDist.text}> ${opcionSeleccionadaSeccion.text}`;
 
       const mesasEscrutadas = document.getElementById("mesas-escrutadas");
       const electores = document.getElementById("electores");
@@ -333,34 +335,47 @@ function agregarInforme() {
   const opcionSeleccionadaDist =
     distritoSelect.options[distritoSelect.selectedIndex];
 
-  console.log("distritoselect", distritoSelect.text);
-  const vAnio = anioSelect.value;
-  const vTipoRecuento = tipoRecuento;
-  const vTipoEleccion = tipoEleccion;
-  const vCategoriaId = cargoSelect.value;
-  const vDistrito = distritoSelect.value;
-  const vSeccionProvincial = hdSeccionProvincial.value;
-  const vSeccionID = seccionSelect.value;
-  const provincia = opcionSeleccionadaDist.text;
-  const cargo = opcionSeleccionadaCargo.text;
-  const tipoEleccionTexto = "Generales";
+  const nuevoRegistro = {
+    vAnio: anioSelect.value,
+    vTipoRecuento: tipoRecuento,
+    vTipoEleccion: tipoEleccion,
+    vCategoriaId: cargoSelect.value,
+    vDistrito: distritoSelect.value,
+    vSeccionProvincial: hdSeccionProvincial.value,
+    vSeccionID: seccionSelect.value,
+    provincia: opcionSeleccionadaDist.text,
+    cargo: opcionSeleccionadaCargo.text,
+    tipoEleccion: generales,
+  };
 
-  const nuevoRegistro = [
-    `${vAnio}|${vTipoRecuento}|${vTipoEleccion}|${vCategoriaId}|${vDistrito}|${vSeccionProvincial}|${vSeccionID}|${provincia}|${cargo}|${tipoEleccionTexto}`,
-  ];
-  const key = "INFORMES";
+  const informesExistenteJSON = localStorage.getItem("INFORMES");
+  let informesExistente = [];
 
-  const informeJson = localStorage.getItem(key);
-  const informeObjeto = JSON.parse(informeJson);
+  if (informesExistenteJSON) {
+    informesExistente = JSON.parse(informesExistenteJSON);
+  }
 
-  if (registroInformes.includes(nuevoRegistro)) {
+  const informesExistenteStrings = informesExistente.map((registro) =>
+    JSON.stringify(registro)
+  );
+  const nuevoRegistroString = JSON.stringify(nuevoRegistro);
+
+  const existeRegistro = informesExistenteStrings.includes(nuevoRegistroString);
+
+  if (existeRegistro) {
     cartelAmarillo.style.display = "block";
     cartelAmarillo.innerHTML =
-      '<p><i class="fa-solid fa-exclamation"></i> Ya existe este registro!</p>';
+      '<p><i class="fa-solid fa-exclamation"></i>  Ya existe el registro!</p>';
+    setTimeout(() => {
+      cartelAmarillo.style.display = "none";
+    }, 4000);
   } else {
-    registroInformes.push(nuevoRegistro);
-    localStorage.setItem("INFORMES", JSON.stringify(registroInformes));
+    informesExistente.push(nuevoRegistro);
+    localStorage.setItem("INFORMES", JSON.stringify(informesExistente));
     cartelVerde.style.display = "block";
+    setTimeout(() => {
+      cartelVerde.style.display = "none";
+    }, 4000);
   }
 }
 
@@ -399,11 +414,6 @@ function llenarAgrupacionPolitica() {
     const separacion = document.createElement("div");
     separacion.classList.add("agrup-ind");
     agrupacionTexto.appendChild(separacion);
-
-    // const h3 = document.createElement("h3");
-    // h3.innerText = agrupaciones[i].nombre;
-
-    // separacion.appendChild(h3);
 
     const div = document.createElement("div");
     separacion.appendChild(div);

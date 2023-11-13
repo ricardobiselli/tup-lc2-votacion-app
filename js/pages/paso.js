@@ -204,8 +204,6 @@ async function cargarSeccion() {
   console.log("TEST!!!!!! Finaliza cargarSeccion");
 }
 
-
-
 async function filtrarResultados() {
   console.log("Entro a filtrarResultados");
   const anioEleccion = anioSelect.value;
@@ -253,12 +251,12 @@ async function filtrarResultados() {
       anioEleccion == "Año"
         ? "No seleccionó el año"
         : categoriaId == "Cargo"
-          ? "No seleccionó el cargo"
-          : distritoId == "Distrito"
-            ? "No seleccionó el distrito"
-            : seccionId == "Sección"
-              ? "No seleccionó la seccion"
-              : "";
+        ? "No seleccionó el cargo"
+        : distritoId == "Distrito"
+        ? "No seleccionó el distrito"
+        : seccionId == "Sección"
+        ? "No seleccionó la seccion"
+        : "";
     console.log("TEST Mensaje construido:", mensaje);
     cartelAmarillo.style.display = "block";
     cartelAmarillo.innerHTML = `<p><i class="fa-solid fa-exclamation"></i> Falta seleccionar algún campo: ${mensaje}</p>`;
@@ -326,39 +324,54 @@ async function filtrarResultados() {
 }
 
 function agregarInforme() {
-  const vAnio = anioSelect.value;
-  const vTipoRecuento = provisorio; 
-  const vTipoEleccion = paso; 
-  const vCategoriaId = cargoSelect.value;
-  const vDistrito = distritoSelect.value;
-  const vSeccionProvincial = hdSeccionProvincial.value;
-  const vSeccionID = seccionSelect.value;
-  const vCircuitoId = "";
-  const vMesaId = "";
+  const opcionSeleccionadaCargo =
+    cargoSelect.options[cargoSelect.selectedIndex];
+  const opcionSeleccionadaDist =
+    distritoSelect.options[distritoSelect.selectedIndex];
 
-  const nuevaCadena = `vAnio=${vAnio}|vTipoRecuento=${vTipoRecuento}|vTipoEleccion=${vTipoEleccion}|vCategoriaId=${vCategoriaId}|vDistrito=${vDistrito}|vSeccionProvincial=${vSeccionProvincial}|vSeccionID=${vSeccionID}vCircuitoId=${vCircuitoId}vMesaId=${vMesaId}`;
+  const nuevoRegistro = {
+    vAnio: anioSelect.value,
+    vTipoRecuento: tipoRecuento,
+    vTipoEleccion: tipoEleccion,
+    vCategoriaId: cargoSelect.value,
+    vDistrito: distritoSelect.value,
+    vSeccionProvincial: hdSeccionProvincial.value,
+    vSeccionID: seccionSelect.value,
+    provincia: opcionSeleccionadaDist.text,
+    cargo: opcionSeleccionadaCargo.text,
+    tipoEleccion: "Paso",
+  };
 
-  const informesGuardados = JSON.parse(localStorage.getItem("INFORMES")) || [];
+  const informesExistenteJSON = localStorage.getItem("INFORMES");
+  let informesExistente = [];
 
-  const existeRegistro = informesGuardados.includes(nuevaCadena);
+  if (informesExistenteJSON) {
+    informesExistente = JSON.parse(informesExistenteJSON);
+  }
 
-  if (!existeRegistro) {
+  const informesExistenteStrings = informesExistente.map((registro) =>
+    JSON.stringify(registro)
+  );
+  const nuevoRegistroString = JSON.stringify(nuevoRegistro);
+
+  const existeRegistro = informesExistenteStrings.includes(nuevoRegistroString);
+
+  if (existeRegistro) {
+    cartelAmarillo.style.display = "block";
+    cartelAmarillo.innerHTML =
+      '<p><i class="fa-solid fa-exclamation"></i>  Ya existe el registro!</p>';
+    setTimeout(() => {
+      cartelAmarillo.style.display = "none";
+    }, 4000);
+  } else {
+    informesExistente.push(nuevoRegistro);
+    localStorage.setItem("INFORMES", JSON.stringify(informesExistente));
     cartelVerde.style.display = "block";
     setTimeout(() => {
       cartelVerde.style.display = "none";
-    }, 5000);
-    informesGuardados.push(nuevaCadena);
-    localStorage.setItem("INFORMES", JSON.stringify(informesGuardados));
-
-  } else {
-    cartelAmarillo.style.display = "block";
-    cartelAmarillo.innerHTML = '<p><i class="fa-solid fa-exclamation"></i> Ya existe el registro!</p>';
-    setTimeout(() => {
-      cartelAmarillo.style.display = "none";
-    }, 5000);
+    }, 4000);
   }
 }
-
 
 function llenarAgrupacionPolitica() {
   let i = 0;
@@ -410,14 +423,14 @@ function llenarAgrupacionPolitica() {
   <div
     class="progress-bar"
     style="width: ${(
-          (agrupaciones[i].listas[j].Votos * 100) /
-          agrupaciones[i].votos
-        ).toFixed(2)}%; background: ${colores[i].colorPleno}"
+      (agrupaciones[i].listas[j].Votos * 100) /
+      agrupaciones[i].votos
+    ).toFixed(2)}%; background: ${colores[i].colorPleno}"
   >
     <span class="progress-bar-text">${(
-          (agrupaciones[i].listas[j].Votos * 100) /
-          agrupaciones[i].votos
-        ).toFixed(2)}%</span>
+      (agrupaciones[i].listas[j].Votos * 100) /
+      agrupaciones[i].votos
+    ).toFixed(2)}%</span>
   </div>
 `;
     }

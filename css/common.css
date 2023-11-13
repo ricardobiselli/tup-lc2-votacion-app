@@ -158,3 +158,45 @@ button {
   line-height: 25px;
 }
 
+.verde {
+  background-color: var(--mensaje-usuario-verde);
+  width: 400px;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  font-size: 12px;
+  font-weight: 200;
+  text-align: center;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.rojo {
+  background-color: var(--mensaje-usuario-rojo);
+  width: 400px;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  font-size: 12px;
+  font-weight: 200;
+  text-align: center;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.amarillo {
+  background-color: var(--mensaje-usuario-amarillo);
+  width: 400px;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  font-size: 12px;
+  font-weight: 200;
+  text-align: center;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.icon-button {
+  color: white;
+}

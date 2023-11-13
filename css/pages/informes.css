@@ -196,15 +196,9 @@
   align-items: center;
   justify-content: center;
   max-width: 100px;
-}
-
-.icon-button p {
   color: white;
 }
 
-.icon-text {
-  color: #fff;
-}
 
 .contenedor-cajas {
   display: flex;
@@ -372,5 +366,12 @@
 .rojo,
 .verde {
   display: none;
+}
 
+.mapa {
+  width: 100px;
+}
+
+.mapa svg {
+  width: 300px;
 }
