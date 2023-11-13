@@ -151,10 +151,10 @@ button {
   flex: 60%;
   max-height: 100%;
   overflow: hidden;
-  /* oculta el texto que se sale de pantalla */
 }
 
 .footer-text p {
   color: var(--texto-footer);
   line-height: 25px;
 }
+
