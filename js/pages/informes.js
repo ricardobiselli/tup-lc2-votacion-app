@@ -34,10 +34,11 @@ function pantallaInicio() {
             const vDistrito = informe[4];
             const vSeccionProvincial = informe[5];
             const vSeccionID = informe[6];
-            const vCircuitoId = informe[7];
-            const vMesaId = informe[8];
+            const vCircuitoId = "";
+            const vMesaId = "";
 
             const url = `https://resultados.mininterior.gob.ar/api/resultado/totalizado?año=${vAnio}&recuento=${vTipoRecuento}&idEleccion=${vTipoEleccion}&idCargo=${vCategoriaId}&idDistrito=${vDistrito}&idSeccionProvincial=${vSeccionProvincial}&idSeccion=${vSeccionID}&circuitoId=${vCircuitoId}&mesaId=${vMesaId}`;
+
             console.log(url);
 
             try {
@@ -67,4 +68,5 @@ function pantallaInicio() {
     }
 }
 
+pantallaInicio();
 
