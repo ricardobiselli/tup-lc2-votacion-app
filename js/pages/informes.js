@@ -1,62 +1,70 @@
-const informesGuardadosStorage = JSON.parse(localStorage.getItem("INFORMES"));
-console.log('Estado actual del localStorage:', localStorage.getItem('INFORMES'));
-console.log(informesGuardadosStorage)
-const pasos = document.querySelector(".container-pasos");
+const informesGuardadosStorage = localStorage.getItem("INFORMES");
+
+//console.log('Estado actual del localStorage:', localStorage.getItem('INFORMES'));
+//console.log(informesGuardadosStorage)
 const cartelVerde = document.getElementsByClassName("verde")[0];
 const cartelAmarillo = document.getElementsByClassName("amarillo")[0];
 const cartelRojo = document.getElementsByClassName("rojo")[0];
+const contenedorPrincipal = document.getElementsByClassName("main")[0];
+const contenedorMapa = document.getElementsByClassName("container-mapa")[0];
+
+
 
 
 function pantallaInicio() {
-
     if (!informesGuardadosStorage || informesGuardadosStorage.length === 0) {
-        console.log("TEST informes NO guardados")
+        console.log("TEST informes NO guardados");
 
-        pasos.style.visibility = "hidden";
         cartelAmarillo.style.display = "block";
         cartelAmarillo.innerHTML =
             '<p><i class="fa-solid fa-exclamation"></i> No hay informes guardados para mostrar</p>';
+        //contenedorPrincipal.style.visibility= "hidden"
     } else {
-        procesarInformes();
-        pasos.style.visibility = "visible";
-    }
-}
-pantallaInicio();
+        contenedorPrincipal.style.visibility = "visible";
 
-function procesarInformes() {
-    informesGuardadosStorage.forEach(async (informe) => {
+        const informesArray = informesGuardadosStorage.split(',');
 
-        const vAnio = informe.vAnio;
-        const tipoRecuento = informe.vTipoRecuento;
-        const tipoEleccion = informe.vTipoEleccion;
-        const categoriaId = informe.vCategoriaId;
-        const distrito = informe.vDistrito;
-        const seccionProvincial = informe.vSeccionProvincial;
-        const seccionId = informe.vSeccionID;
-        const circuitoId = informe.vcircuitoId;
-        const mesaId = informe.vmesaId;
+        informesArray.forEach(async (informeString) => {
+            const informe = informeString.split('|');
 
-        
+            const vAnio = informe[0];
+            const vTipoRecuento = informe[1];
+            const vTipoEleccion = informe[2];
+            const vCategoriaId = informe[3];
+            const vDistrito = informe[4];
+            const vSeccionProvincial = informe[5];
+            const vSeccionID = informe[6];
+            const vCircuitoId = informe[7];
+            const vMesaId = informe[8];
 
-        const url = `https://resultados.mininterior.gob.ar/api/resultado/totalizado?año=${vAnio}&recuento=${tipoRecuento}&idEleccion=${tipoEleccion}&idCargo=${categoriaId}&idDistrito=${distrito}&idSeccionProvincial=${seccionProvincial}&idSeccion=${seccionId}&circuitoId=${circuitoId}&mesaId=${mesaId}`;
-        try {
-            const response = await fetch(url);
-            console.log(response)
+            const url = `https://resultados.mininterior.gob.ar/api/resultado/totalizado?año=${vAnio}&recuento=${vTipoRecuento}&idEleccion=${vTipoEleccion}&idCargo=${vCategoriaId}&idDistrito=${vDistrito}&idSeccionProvincial=${vSeccionProvincial}&idSeccion=${vSeccionID}&circuitoId=${vCircuitoId}&mesaId=${vMesaId}`;
+            console.log(url);
 
-            if (response.ok) {
-                const data = await response.json();
-                armarTabla(data);
-            } else {
-                console.error("Error en la consulta:", response);
+            try {
+                const response = await fetch(url);
+
+                if (response.ok) {
+                    console.log("RESPUESTA OK")
+
+                    const data = await response.json();
+                    const provincia = informe[6];
+                    const mapa = mapas.find((mapa) => mapa.provincia.toLowerCase() === provincia.toLowerCase());
+                    if (mapa) {
+                        const svg = document.querySelector(".mapa");
+                        svg.innerHTML = mapa.svg;
+                        //contenedorMapa.appendChild(svg);
+                    } else {
+                        console.log("Mapa no encontrado para la provincia: ", provincia);
+                    }
+                } else {
+                    console.error("Error en la consulta:", response);
+                    console.log("TEST respuesta fail");
+                }
+            } catch (error) {
+                console.error("Error en la consulta:", error);
             }
-        } catch (error) {
-            console.error("Error en la consulta:", error);
-        }
-    });
-}
-
-function armarTabla(data) {
-    
+        });
+    }
 }
 
 
